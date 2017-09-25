@@ -11,10 +11,14 @@
         <Button Content="Button" HorizontalAlignment="Left"
                Click="Button_ClickAsync"
                 VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left"
-                   Name="rssOutput"
-                   TextWrapping="WrapWholeWords"
-                   Margin="0,107,0,0" Text="TextBlock" VerticalAlignment="Top" Height="131" Width="399"/>
+        <ListView HorizontalAlignment="Left"
+                
+                  Name="Liste1"
+                  Height="304.387" Margin="105.407,37,0,0" VerticalAlignment="Top" Width="516" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <ListView.RenderTransform>
+                <CompositeTransform SkewX="43.033" TranslateX="46.679"/>
+            </ListView.RenderTransform>
+        </ListView>
 
     </Grid>
 </Page>

@@ -34,11 +34,17 @@ namespace App1
             var client = new SyndicationClient();
             Uri feedUri = new Uri("https://www.langweiledich.net/feed/");
             SyndicationFeed feed = await client.RetrieveFeedAsync(feedUri);
-            rssOutput.Text = feed.Title.Text + Environment.NewLine;
-            foreach (SyndicationItem item in feed.Items)
-            {
-                rssOutput.Text += item.Title.Text + ", " + item.PublishedDate.ToString() + Environment.NewLine;
-            }
+
+            var q = from f in feed.Items
+                    select f.Title.Text ;
+            // rssOutput.Text = feed.Title.Text + Environment.NewLine;
+            //foreach (SyndicationItem item in feed.Items)
+            //{
+            //    Liste1.Items.Add(item.Title.Text);
+            //    // rssOutput.Text += item.Title.Text + ", " + item.PublishedDate.ToString() + Environment.NewLine;
+            //}
+
+            Liste1.ItemsSource = q.ToList();
         }
 
 
