@@ -30,6 +30,7 @@
                 Height="30"
                 VerticalAlignment="Stretch" 
                 Name="BtnHannes"
+       
                 Click="BtnHannes_Click"/>
 
     </Grid>

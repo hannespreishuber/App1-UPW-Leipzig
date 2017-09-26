@@ -44,7 +44,7 @@ namespace App1
             //    // rssOutput.Text += item.Title.Text + ", " + item.PublishedDate.ToString() + Environment.NewLine;
             //}
 
-            Liste1.ItemsSource = q.ToList();
+            Liste1.ItemsSource = q;
         }
 
 
