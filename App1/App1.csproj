@@ -101,6 +101,15 @@
     <Compile Include="BlankPage10.xaml.cs">
       <DependentUpon>BlankPage10.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BlankPage11.xaml.cs">
+      <DependentUpon>BlankPage11.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BlankPage12.xaml.cs">
+      <DependentUpon>BlankPage12.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BlankPage13.xaml.cs">
+      <DependentUpon>BlankPage13.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BlankPage2.xaml.cs">
       <DependentUpon>BlankPage2.xaml</DependentUpon>
     </Compile>
@@ -136,6 +145,7 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="App1_TemporaryKey.pfx" />
+    <None Include="nortwhind.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\haus.JPG" />
@@ -159,6 +169,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BlankPage10.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BlankPage11.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BlankPage12.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BlankPage13.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

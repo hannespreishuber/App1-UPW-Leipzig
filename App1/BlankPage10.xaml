@@ -6,6 +6,21 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton Label="AppBarButton"/>
+                <AppBarButton Label="AppBarButton" />
+                <AppBarToggleButton Label="AppBarToggleButton"/>
+            </CommandBar.SecondaryCommands>
+            <CommandBar.Content>
+                <Grid/>
+            </CommandBar.Content>
+            <AppBarButton Icon="Accept" Label="AppBarButton"/>
+            <AppBarButton Icon="Cancel" Label="AppBarButton"/>
+            <AppBarToggleButton Label="AppBarToggleButton"/>
+        </CommandBar>
+    </Page.BottomAppBar>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Image HorizontalAlignment="Left" Height="100" Margin="146,81,0,0" VerticalAlignment="Top" Width="145" Source="Assets/haus.JPG"/>
