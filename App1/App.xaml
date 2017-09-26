@@ -4,5 +4,20 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:App1"
     RequestedTheme="Light">
+    <Application.Resources>
+        <Color x:Key="HannesColor1">White</Color>
+        <LinearGradientBrush x:Key="HannesBrush1" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="0"/>
+            <GradientStop Color="{StaticResource HannesColor1}" Offset="1"/>
+        </LinearGradientBrush>
+        <ResourceDictionary x:Key="eins">
+
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionary1.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+    </Application.Resources>
 
 </Application>
