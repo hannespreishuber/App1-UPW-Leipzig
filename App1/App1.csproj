@@ -12,7 +12,7 @@
     <DefaultLanguage>de-DE</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.15063.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.10586.0</TargetPlatformMinVersion>
+    <TargetPlatformMinVersion>10.0.15063.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -107,6 +107,12 @@
     <Compile Include="BlankPage4.xaml.cs">
       <DependentUpon>BlankPage4.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BlankPage5.xaml.cs">
+      <DependentUpon>BlankPage5.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BlankPage6.xaml.cs">
+      <DependentUpon>BlankPage6.xaml</DependentUpon>
+    </Compile>
     <Compile Include="helper.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -120,6 +126,7 @@
     <None Include="App1_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\musik.mp3" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -147,6 +154,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BlankPage4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BlankPage5.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BlankPage6.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
