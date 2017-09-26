@@ -134,6 +134,7 @@
     <Compile Include="BlankPage9.xaml.cs">
       <DependentUpon>BlankPage9.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Customer.cs" />
     <Compile Include="helper.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
