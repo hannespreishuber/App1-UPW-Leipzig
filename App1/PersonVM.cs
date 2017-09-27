@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace App1
 {
-    class PersonVM
+   public class PersonVM
     {
         public Person Mitarbeiter { get; set; }
         public PersonVM()
