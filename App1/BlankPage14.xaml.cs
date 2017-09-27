@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -31,20 +32,27 @@ namespace App1
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+
+
             var list = new List<Customer>();
             var file = await StorageFile.GetFileFromApplicationUriAsync(new Uri("ms-appx:///northwind.json"));
-           
             string result = await FileIO.ReadTextAsync(file);
+             list = JsonConvert.DeserializeObject<List<Customer>>(result);
+            watch.Stop();
+            Debug.WriteLine(watch.ElapsedTicks);
+            watch.Reset();
+            watch.Start();
 
-             list = await JsonConvert.DeserializeObjectAsync<List<Customer>>(result);
-
-            //var serializer = new JsonSerializer();
- //var data = await file.OpenStreamForReadAsync();
-            //using (var sr = new StreamReader(data.AsRandomAccessStream().AsStream()))
-            //using (var jsonTextReader = new JsonTextReader(sr))
-            //{
-            //  list=serializer.Deserialize<List<Customer>>(jsonTextReader);
-            //}
+            var serializer = new JsonSerializer();
+            var data = await file.OpenStreamForReadAsync();
+            using (var sr = new StreamReader(data.AsRandomAccessStream().AsStream()))
+            using (var jsonTextReader = new JsonTextReader(sr))
+            {
+                list = serializer.Deserialize<List<Customer>>(jsonTextReader);
+            }
+            watch.Stop();
+            Debug.WriteLine(watch.ElapsedTicks);
         }
 
 
