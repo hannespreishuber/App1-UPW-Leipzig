@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -55,7 +56,19 @@ namespace App1
             Debug.WriteLine(watch.ElapsedTicks);
         }
 
+        private async void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var client = new HttpClient();
+            client.DefaultRequestHeaders.Add("Accept", "application/json");
+            var result = await client.GetStringAsync("http://northwind.servicestack.net/customers?format=json");
 
+
+            var list = new List<Customer>();
+            list = JsonConvert.DeserializeObject<Customers>(result).Customerss.ToList(); //This is a bug, and we know it, it's open Source ->fix it!
+            //http://localhost:3017/api/Customers
+
+
+        }
     }
     }
 

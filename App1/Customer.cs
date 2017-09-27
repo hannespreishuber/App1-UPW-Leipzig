@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace App1
 {
-    class Customer
+  public  class Customer
     {
   
         public string Address { get; set; }
