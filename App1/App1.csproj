@@ -113,6 +113,15 @@
     <Compile Include="BlankPage14.xaml.cs">
       <DependentUpon>BlankPage14.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BlankPage15.xaml.cs">
+      <DependentUpon>BlankPage15.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BlankPage16.xaml.cs">
+      <DependentUpon>BlankPage16.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BlankPage17.xaml.cs">
+      <DependentUpon>BlankPage17.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BlankPage2.xaml.cs">
       <DependentUpon>BlankPage2.xaml</DependentUpon>
     </Compile>
@@ -149,14 +158,25 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Person.cs" />
+    <Compile Include="PersonVM.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SampleData\SampleDataSource\SampleDataSource.xaml.cs">
+      <DependentUpon>SampleDataSource.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="SampleData\SampleDataSource\SampleDataSource_Files\image01.png" />
+    <Content Include="SampleData\SampleDataSource\SampleDataSource_Files\image02.png" />
+    <Content Include="SampleData\SampleDataSource\SampleDataSource_Files\image03.png" />
+    <Content Include="SampleData\SampleDataSource\SampleDataSource_Files\image04.png" />
+    <Content Include="SampleData\SampleDataSource\SampleDataSource_Files\image05.png" />
     <None Include="App1_TemporaryKey.pfx" />
     <Content Include="northwind.json" />
+    <None Include="SampleData\SampleDataSource\SampleDataSource.xsd" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\haus.JPG" />
@@ -196,6 +216,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BlankPage14.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BlankPage15.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BlankPage16.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BlankPage17.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -245,6 +277,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Page>
     <Page Include="MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SampleData\SampleDataSource\SampleDataSource.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
