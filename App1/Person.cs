@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,18 +18,17 @@ namespace App1
             get { return name; }
             set {
                 name = value;
-                OnPropertyChanged("Name");
+                OnPropertyChanged();
             }
         }
 
 
         public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged(string propertyName)
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName="")
         {
-            if (this.PropertyChanged != null)
-            {
-                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
+           
+                this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+           
         }
     }
 }
