@@ -134,6 +134,9 @@
     <Compile Include="BlankPage20.xaml.cs">
       <DependentUpon>BlankPage20.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BlankPage21.xaml.cs">
+      <DependentUpon>BlankPage21.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BlankPage3.xaml.cs">
       <DependentUpon>BlankPage3.xaml</DependentUpon>
     </Compile>
@@ -255,6 +258,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BlankPage20.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BlankPage21.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
