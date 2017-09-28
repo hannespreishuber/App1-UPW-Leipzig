@@ -21,6 +21,14 @@
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
       <Extensions>
+        <uap:Extension Category="windows.appService" Executable="App1.exe" EntryPoint="MyBackGround">
+          <uap:AppService Name="dienst" />
+        </uap:Extension>
+        <uap:Extension Category="windows.shareTarget">
+          <uap:ShareTarget Description="demo">
+            <uap:DataFormat>Bitmap</uap:DataFormat>
+          </uap:ShareTarget>
+        </uap:Extension>
         <uap:Extension Category="windows.protocol">
           <uap:Protocol Name="ppedv" />
         </uap:Extension>
