@@ -76,9 +76,7 @@ namespace App1
             }
         }
 
-        protected override void OnActivated(IActivatedEventArgs args)
-
-        {
+        protected override void OnActivated(IActivatedEventArgs args)        {
             Frame rootFrame = Window.Current.Content as Frame;
 
 
@@ -86,7 +84,7 @@ namespace App1
             {
 
 
-                rootFrame.Navigate(typeof(BlankPage25));
+                rootFrame.Navigate(typeof(BlankPage27));
                 Msg = ((ProtocolActivatedEventArgs)args).Uri.Query;
 
             }
