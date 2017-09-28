@@ -79,16 +79,19 @@ namespace App1
         protected override void OnActivated(IActivatedEventArgs args)        {
             Frame rootFrame = Window.Current.Content as Frame;
 
-
+            rootFrame = new Frame();
+            Window.Current.Content = rootFrame;
             if (args.Kind == ActivationKind.Protocol)
             {
+                Msg = ((ProtocolActivatedEventArgs)args).Uri.ToString();
 
-
-                rootFrame.Navigate(typeof(BlankPage27));
-                Msg = ((ProtocolActivatedEventArgs)args).Uri.Query;
+                rootFrame.Navigate(typeof(BlankPage26));
+             
 
             }
+            Window.Current.Activate();
             base.OnActivated(args);
+           
         }
 
         /// <summary>
