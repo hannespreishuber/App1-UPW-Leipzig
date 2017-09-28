@@ -21,6 +21,9 @@
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
       <Extensions>
+        <uap:Extension Category="windows.protocol" StartPage="BlankPage26">
+          <uap:Protocol Name="ppedv" />
+        </uap:Extension>
         <Extension Category="windows.backgroundTasks" Executable="app1.exe" EntryPoint="MyBackGround">
           <BackgroundTasks>
             <Task Type="timer" />

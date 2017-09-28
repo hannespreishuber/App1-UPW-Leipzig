@@ -22,6 +22,7 @@ namespace App1
     /// </summary>
     sealed partial class App : Application
     {
+        public string Msg { get; set; }
         /// <summary>
         /// Initialisiert das Singletonanwendungsobjekt. Dies ist die erste Zeile von erstelltem Code
         /// und daher das logische Äquivalent von main() bzw. WinMain().
@@ -39,6 +40,8 @@ namespace App1
         /// <param name="e">Details über Startanforderung und -prozess.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+
+
             Frame rootFrame = Window.Current.Content as Frame;
 
             // App-Initialisierung nicht wiederholen, wenn das Fenster bereits Inhalte enthält.
@@ -66,11 +69,28 @@ namespace App1
                     // Wenn der Navigationsstapel nicht wiederhergestellt wird, zur ersten Seite navigieren
                     // und die neue Seite konfigurieren, indem die erforderlichen Informationen als Navigationsparameter
                     // übergeben werden
-                    rootFrame.Navigate(typeof(BlankPage24), e.Arguments);
+                    rootFrame.Navigate(typeof(BlankPage25), e.Arguments);
                 }
                 // Sicherstellen, dass das aktuelle Fenster aktiv ist
                 Window.Current.Activate();
             }
+        }
+
+        protected override void OnActivated(IActivatedEventArgs args)
+
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+
+
+            if (args.Kind == ActivationKind.Protocol)
+            {
+
+
+                rootFrame.Navigate(typeof(BlankPage25));
+                Msg = ((ProtocolActivatedEventArgs)args).Uri.Query;
+
+            }
+            base.OnActivated(args);
         }
 
         /// <summary>
