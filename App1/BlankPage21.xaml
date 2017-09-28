@@ -19,7 +19,7 @@
             <RowDefinition Height="331*"/>
         </Grid.RowDefinitions>
         <Button Content="lade.." Click="{x:Bind MyVM.LadeDaten}" Grid.Row="0"></Button>
-        <ListView VerticalAlignment="Top" HorizontalAlignment="Stretch"
+        <ListView VerticalAlignment="Top" HorizontalAlignment="Stretch" 
                   Margin="50,0,50,0" ItemsSource="{x:Bind MyVM.Customers}" ItemContainerStyle="{StaticResource ListViewItemStyle1}" Grid.Row="1"
                   >
             <ListView.ItemTemplate>
